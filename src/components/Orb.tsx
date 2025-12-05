@@ -181,7 +181,8 @@ function Orb({ className, style, onReady }: OrbProps) {
         'https://api.audius.co/v1/tracks/lpyrbGZ',
         'https://api.audius.co/v1/tracks/J83vpaz',
         'https://api.audius.co/v1/tracks/VE6wl7W',
-        'https://api.audius.co/v1/tracks/wkAp0qr'
+        'https://api.audius.co/v1/tracks/wkAp0qr',
+        'https://api.audius.co/v1/tracks/OovgEBR',
       ]
       let selectedTrackBaseUrl: string | null = null
 
