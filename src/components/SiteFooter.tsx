@@ -94,7 +94,6 @@ export default function SiteFooter() {
             <FooterHeading>Community</FooterHeading>
             <FooterLinks>
               <a href="https://docs.openaudio.org/blog">Blog</a>
-              <a href="https://x.com/OpenAudioProto" target="_blank" rel="noreferrer">X</a>
               <a href="https://github.com/OpenAudio" target="_blank" rel="noreferrer">Github</a>
               <a href="https://explorer.openaudio.org">Explorer</a>
             </FooterLinks>

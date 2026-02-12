@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import Logo from "../assets/logo.svg?react";
 
-const Header = styled.header<{ $scrolled: boolean }>`
+const Header = styled.header`
   position: fixed;
   top: 24px;
   left: 0;
@@ -18,9 +18,6 @@ const Header = styled.header<{ $scrolled: boolean }>`
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-bottom: 1px solid transparent;
-  opacity: ${({ $scrolled }) => ($scrolled ? 0 : 1)};
-  pointer-events: ${({ $scrolled }) => ($scrolled ? "none" : "auto")};
-  transition: opacity 200ms ease;
   @media (max-width: 768px) {
     padding: 0 16px;
   }
@@ -34,6 +31,9 @@ const LogoWrap = styled.div`
     height: 36px;
     width: auto;
     display: block;
+  }
+  svg path {
+    fill: currentColor;
   }
 `;
 
@@ -64,7 +64,7 @@ const Nav = styled.nav`
 const LogoLink = styled.a`
   display: inline-flex;
   align-items: center;
-  color: #ededed;
+  color: inherit;
   cursor: pointer;
   opacity: 1;
   transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -128,13 +128,14 @@ export default function SiteHeader() {
 
   return (
     <>
-      <Header $scrolled={scrolled}>
+      <Header>
         <LogoWrap>
           <LogoLink href="/">
             <Logo />
           </LogoLink>
         </LogoWrap>
         <Nav>
+          <a href="#vibecode">Vibecode</a>
           <a href="https://docs.openaudio.org">Docs</a>
           <a
             href="https://staking.openaudio.org"
@@ -176,6 +177,7 @@ export default function SiteHeader() {
         $open={menuOpen && !scrolled}
         onClick={() => setMenuOpen(false)}
       >
+        <a href="#vibecode">Vibecode</a>
         <a href="https://docs.openaudio.org">Docs</a>
         <a
           href="https://staking.openaudio.org"
